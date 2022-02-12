@@ -1,0 +1,29 @@
+// @mixin xl() {
+//   @media screen and (max-width: 1200px) {
+//     @content;
+//   }
+// }
+
+// @mixin desktop-lg() {
+//   @media screen and (max-width: 968px) {
+//     @content;
+//   }
+// }
+
+@mixin nav-collapse() {
+  @media screen and (max-width: 952px) {
+    @content;
+  }
+}
+
+@mixin tablet() {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin mobile() {
+  @media screen and (max-width: 576px) {
+    @content;
+  }
+}

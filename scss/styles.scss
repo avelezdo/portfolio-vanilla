@@ -1,0 +1,201 @@
+@import '_typography';
+@import '_mixins';
+@import '_variables';
+@import '_media-queries';
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	body {
+		font-family: 'Tajawal', arial, sans-serif;
+		width: 950px;
+		margin: 0 auto;
+		position: relative;
+		@include nav-collapse {
+			width: 100%;
+		}
+		a {
+			text-decoration: none;
+			color: inherit;
+		}
+		.container {
+			margin-top: 0;
+			@include nav-collapse {
+				margin-top: 4rem;
+			}
+		}
+		section.section__body {
+			color: $text;
+			@include nav-collapse {
+				margin: 0 auto;
+				padding-top: 20%;
+				&:first-child {
+					padding-top: 10%;
+				}
+			}
+			@include mobile {
+				width: 100%;
+			}
+			.section__headline {
+				display: inline-block;
+				padding: 4px 14px;
+				font-size: 1.2rem;
+				font-weight: 500;
+				border-radius: 18px 30px;
+				color: $blue__med;
+				background: $blue__light-x;
+				margin-bottom: 10px;
+				@include nav-collapse {
+					font-size: 1.1rem;
+				}
+				@include mobile {
+					font-size: 1rem;
+				}
+			}
+			.section__headline.large {
+				background: $blue__light-x;
+				font-size: 1.6rem;
+				@include mobile {
+					font-size: 1.4rem;
+				}
+			}
+			.section__header {
+				display: inline-block;
+				font-family: 'Fira Sans', arial, sans-serif;
+				font-size: 2.5rem;
+				color: $gray__light;
+				margin-bottom: 10px;
+				letter-spacing: 1px;
+				font-weight: 900;
+				@include nav-collapse {
+					font-size: 2rem;
+				}
+			}
+			.header-with-tag {
+				@include flex(row, flex-start, center);
+				@include nav-collapse {
+					@include flex(column, flex-start, flex-start);
+				}
+			}
+			.section__copy {
+				font-size: 1.05rem;
+				padding-bottom: 12px;
+				padding-left: 1rem;
+				color: $text;
+				font-family: inherit;
+				@include nav-collapse {
+					font-size: 1rem;
+				}
+			}
+		}
+		.image-wrapper {
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			margin: 0 auto;
+			img.img {
+				box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.1);
+				max-width: 260px;
+				min-width: 260px;
+				align-self: center;
+				border-radius: 80% 50%;
+				margin: 1rem;
+			}
+			.mobile-shape {
+				position: absolute;
+				width: 200px;
+				height: 200px;
+				border-radius: 80% 50%;
+			}
+			.ms-left {
+				background: $blue__light;
+				left: 0;
+				transform: translateY(20px);
+				z-index: -1;
+			}
+			.ms-right {
+				background: $blue__light-x;
+				right: 0;
+				transform: translateY(80px);
+				z-index: -1;
+			}
+		}
+		.break {
+			width: 100%;
+			height: 100px;
+			@include nav-collapse {
+				height: 0px;
+			}
+		}
+		.push-left {
+			transform: translateX(-12px);
+			transition: transform 0.25s ease-in-out;
+			@include nav-collapse {
+				transform: translateX(0px);
+			}
+		}
+		.push-right {
+			transform: translateX(12px);
+			transition: transform 0.25s ease-in-out;
+			@include nav-collapse {
+				transform: translateX(0px);
+			}
+		}
+		.push-left_hard {
+			transform: translateX(-30px);
+			transition: transform 0.25s ease-in-out;
+			@include nav-collapse {
+				transform: translateX(0px);
+			}
+		}
+		.push-right_hard {
+			transform: translateX(30px);
+			transition: transform 0.25s ease-in-out;
+			@include nav-collapse {
+				transform: translateX(0px);
+			}
+		}
+	}
+}
+
+.fading-arrow {
+	display: inline-block;
+	clip-path: polygon(50% 70%, 0 30%, 100% 30%);
+	height: 28px;
+	width: 28px;
+	background: $blue__med;
+	transform: translateY(5px);
+	opacity: 0.1;
+}
+
+@for $i from 1 through 8 {
+	.fading-arrow-#{$i} {
+		animation: fading-arrow 1600ms ease-in-out #{$i/2}s infinite forwards;
+	}
+}
+
+@keyframes fading-arrow {
+	0% {
+		opacity: 0.05;
+		transform: translateY(5px);
+		clip-path: polygon(50% 70%, 12% 30%, 88% 30%);
+	}
+	50% {
+		opacity: 0.2;
+		transform: translateY(8px);
+		clip-path: polygon(50% 80%, 12% 30%, 88% 30%);
+	}
+	100% {
+		opacity: 0.05;
+		transform: translateY(5px);
+		clip-path: polygon(50% 70%, 12% 30%, 88% 30%);
+	}
+}
+
+@import '_navbar';
+@import '_about';
+@import '_project';
+@import '_work';
+@import '_footer';
+@import './svg';

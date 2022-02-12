@@ -1,0 +1,47 @@
+.about {
+	padding: 10% 5%;
+}
+
+.profile-photo {
+	object-fit: cover;
+}
+
+#about-info__wrapper {
+	padding: 0 1rem;
+}
+
+.about__upper {
+	@include flex(row, space-between, center);
+}
+
+.about__content {
+	@include flex(row, center, center);
+	@include tablet {
+		@include flex(column, center, center);
+	}
+
+	> div {
+		display: flex;
+		flex-direction: column;
+		.section__headline {
+			display: inline;
+			align-self: flex-start;
+		}
+	}
+	.about__intro {
+		font-size: 1.2rem;
+		font-family: 'Fira Sans', arial, sans-serif;
+		margin-bottom: 10px;
+		color: $gray;
+	}
+}
+
+.nav__icons {
+	@include flex(row, center, center);
+	list-style: none;
+	.nav__icon {
+		width: 24px;
+		opacity: 0.2;
+		margin: 0 10px;
+	}
+}

@@ -1,0 +1,40 @@
+@mixin view($height, $direction) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: center;
+  align-items: center;
+  height: $height;
+}
+
+@mixin flex($dir, $justify, $view) {
+  display: flex;
+  flex-direction: $dir;
+  justify-content: $justify;
+  align-items: $view;
+}
+
+@mixin icon_hover($width, $color--no_hover, $color--hover) {
+  margin: 0px 20px;
+  width: $width;
+  transition: transform 0.25s ease-in-out;
+  transform-origin: center;
+  filter: $color--no_hover;
+  &:hover {
+    transform: scale(1.25);
+    filter: $color--hover;
+    transition: all 0.25s;
+    transform-origin: center;
+  }
+}
+
+// @mixin linkhover($color) {
+//   color: $color;
+//   transform: scale(1.1);
+//   transition: all 0.25s;
+//   transform-origin: left;
+// }
+
+// @mixin arrow-animation($timedelay) {
+//   animation: arrow 1s ease-in-out $timedelay infinite forwards;
+// }
+

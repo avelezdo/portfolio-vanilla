@@ -1,0 +1,56 @@
+svg.headline-tag {
+	height: 36px;
+	path {
+		fill: $blue__light;
+		stroke: none;
+	}
+	@include nav-collapse {
+		// height: 30px;
+	}
+	@include mobile {
+		height: auto;
+		width: 100%;
+	}
+}
+
+svg.same-line {
+	margin-left: 16px;
+	@include nav-collapse {
+		margin-left: 0;
+	}
+}
+
+svg.click-through {
+	width: 240px;
+	position: absolute;
+	overflow: auto;
+	bottom: -80px;
+	left: 0%;
+	@include nav-collapse {
+		bottom: -120px;
+	}
+	@include tablet {
+		bottom: -120px;
+		width: 180px;
+	}
+	@include mobile {
+		bottom: -125px;
+	}
+}
+
+svg.listen-in {
+	width: 240px;
+	position: absolute;
+	overflow: auto;
+	top: -200px;
+	right: 0%;
+	@include nav-collapse {
+		top: 50px;
+	}
+	@include tablet {
+		width: 180px;
+	}
+	@include mobile {
+		top: -55px;
+	}
+}
