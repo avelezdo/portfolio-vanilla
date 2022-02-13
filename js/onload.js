@@ -1,4 +1,4 @@
-import { jobs } from '../assets/data/jobs.json';
+import { jobs } from '../public/data/jobs.json';
 import { renderJobs, attachShowEvent } from './render-work';
 import { renderSkills, attachSkillEvent, renderProjects, myProjects } from './render-projects';
 

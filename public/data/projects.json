@@ -3,7 +3,7 @@
 		{
 			"id": 1,
 			"title": "Portfolio",
-			"image": "../assets/images/project-images/portfolio.jpg",
+			"image": "/images/project-images/portfolio.jpg",
 			"technologies": ["Vue.js 2", "SCSS"],
 			"description": "Portfolio creado con Vue.js 2",
 			"github_link": "https://github.com/avelezdo/portfolio-vue",
@@ -12,7 +12,7 @@
 		{
 			"id": 2,
 			"title": "Perfiles",
-			"image": "../assets/images/project-images/profiles.jpg",
+			"image": "/images/project-images/profiles.jpg",
 			"technologies": ["Vue.js 2", "SCSS", "Node.js/Express", "Vuetify"],
 			"description": "Lista, guarda y elimina perfiles de la API RandomAPI",
 			"github_link": "https://github.com/avelezdo/profiles",
@@ -21,7 +21,7 @@
 		{
 			"id": 3,
 			"title": "Clon YouTube",
-			"image": "../assets/images/project-images/YouTubeClone.jpg",
+			"image": "/images/project-images/YouTubeClone.jpg",
 			"technologies": ["Vue.js 3", "Vite", "WindiCSS"],
 			"description": "Clon de YouTube. Mobile First.",
 			"github_link": "https://github.com/avelezdo/YouTube-clon",

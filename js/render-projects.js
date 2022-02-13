@@ -1,4 +1,4 @@
-import { projects as myProjects } from '../assets/data/projects.json';
+import { projects as myProjects } from '../public/data/projects.json';
 
 let skills = ['Proyectos recientes', 'SCSS', 'Vue.js 2', 'Vue.js 3', 'Node.js/Express'];
 
@@ -80,7 +80,7 @@ let addProductionLink = function (project) {
 	return project.production_link !== ''
 		? `            
             <a href="${project.production_link}" target="_blank">
-                <img src="../assets/images/social-icons/eye.png" width="32"
+                <img src="../images/social-icons/eye.png" width="32"
                 class="project__link">
             </a>`
 		: '';
@@ -90,7 +90,7 @@ let addGitHubLink = function (project) {
 	return project.github_link !== ''
 		? `            
             <a href="${project.github_link}" target="_blank">
-                <img src="./assets/images/social-icons/github.png" width="32"
+                <img src="./images/social-icons/github.png" width="32"
                 class="project__link" alt="${project.title} Github Repo">
             </a>`
 		: '';
