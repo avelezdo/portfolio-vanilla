@@ -26,6 +26,15 @@
 			"description": "Clon de YouTube. Mobile First.",
 			"github_link": "https://github.com/avelezdo/YouTube-clon",
 			"production_link": ""
+		},
+		{
+			"id": 4,
+			"title": "Campeonato de tenis",
+			"image": "images/project-images/tennis-championship.jpg",
+			"technologies": ["Vue.js 3", "Vite", "SCSS"],
+			"description": "Web del I Campeonato de tenis de Tomares",
+			"github_link": "https://github.com/avelezdo/tennis-championship",
+			"production_link": "https://tenis-tomares.netlify.app/"
 		}
 	]
 }
