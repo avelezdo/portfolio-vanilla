@@ -1,47 +1,47 @@
-import { projects as myProjects } from '../public/data/projects.json';
+import { projects as myProjects } from '/public/data/projects.json'
 
-let skills = ['Proyectos recientes', 'SCSS', 'Vue.js 2', 'Vue.js 3', 'Node.js/Express'];
+let skills = ['Proyectos recientes', 'SCSS', 'Vue.js 2', 'Vue.js 3', 'Node.js/Express']
 
-let selectedSkill = null;
+let selectedSkill = null
 
 let renderSkills = function (num) {
 	let ul = document.querySelector('.list__skills'),
 		newArr = skills.map((skill, index) => {
 			if (index === Number.parseInt(num)) {
-				selectedSkill = skill;
-				return `<li class="skill-selector skill__active" data-id="${index}">${skill}</li>`;
+				selectedSkill = skill
+				return `<li class="skill-selector skill__active" data-id="${index}">${skill}</li>`
 			} else {
-				return `<li class="skill-selector skill__inactive" data-id="${index}">${skill}</li>`;
+				return `<li class="skill-selector skill__inactive" data-id="${index}">${skill}</li>`
 			}
-		});
-	ul.innerHTML = newArr.join('');
-	attachSkillEvent();
-};
+		})
+	ul.innerHTML = newArr.join('')
+	attachSkillEvent()
+}
 
 function attachSkillEvent() {
-	let skillSelectors = document.querySelectorAll('.skill-selector');
-	const projectsDestination = document.querySelector('.projects');
+	let skillSelectors = document.querySelectorAll('.skill-selector')
+	const projectsDestination = document.querySelector('.projects')
 	skillSelectors.forEach((skill) => {
 		skill.addEventListener('mousedown', function (e) {
-			renderSkills(e.target.dataset.id);
-			renderProjects(filterProjects(selectedSkill));
+			renderSkills(e.target.dataset.id)
+			renderProjects(filterProjects(selectedSkill))
 			// using the scroll.js function to jump
 			// down the page and view the projects
 			if (window.scrollY <= 5) {
-				scroll(projectsDestination);
+				scroll(projectsDestination)
 			}
-		});
-	});
+		})
+	})
 }
 
 let renderProjects = function (arr, onload = false) {
 	const projectList = document.querySelector('.list__projects'),
-		allProjects = document.querySelectorAll('.project');
+		allProjects = document.querySelectorAll('.project')
 	allProjects.forEach((project, index) => {
 		if (!onload) {
-			project.classList.add(`project-exit-${index + 1}`);
+			project.classList.add(`project-exit-${index + 1}`)
 		}
-	});
+	})
 
 	setTimeout(function () {
 		projectList.innerHTML = arr
@@ -68,13 +68,13 @@ let renderProjects = function (arr, onload = false) {
                 data-project-name="${project.title.toLowerCase()}" class="img project__img">
             </div>
         </li>
-    `;
+    `
 			})
-			.join('');
-	}, 500);
+			.join('')
+	}, 500)
 
-	document.querySelector('.projects-listed').innerHTML = `${arr.length} de ${myProjects.length} proyectos`;
-};
+	document.querySelector('.projects-listed').innerHTML = `${arr.length} de ${myProjects.length} proyectos`
+}
 
 let addProductionLink = function (project) {
 	return project.production_link !== ''
@@ -83,8 +83,8 @@ let addProductionLink = function (project) {
                 <img src="../images/social-icons/eye.png" width="32"
                 class="project__link">
             </a>`
-		: '';
-};
+		: ''
+}
 
 let addGitHubLink = function (project) {
 	return project.github_link !== ''
@@ -93,26 +93,26 @@ let addGitHubLink = function (project) {
                 <img src="./images/social-icons/github.png" width="32"
                 class="project__link" alt="${project.title} Github Repo">
             </a>`
-		: '';
-};
+		: ''
+}
 
 let addTechnologies = function (project) {
 	return project.technologies
 		.map((tech) => {
-			return `<li>${tech}</li>`;
+			return `<li>${tech}</li>`
 		})
-		.join('');
-};
+		.join('')
+}
 
 let filterProjects = function (query) {
 	if (selectedSkill === 'All') {
-		return myProjects;
+		return myProjects
 	}
 	if (selectedSkill === 'Proyectos recientes') {
-		return myProjects.filter((_, index) => index < 3);
+		return myProjects.filter((_, index) => index < 3)
 	}
 
-	return myProjects.filter((p) => p.technologies.includes(query));
-};
+	return myProjects.filter((p) => p.technologies.includes(query))
+}
 
-export { renderSkills, attachSkillEvent, renderProjects, myProjects };
+export { renderSkills, attachSkillEvent, renderProjects, myProjects }
