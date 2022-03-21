@@ -22,6 +22,4 @@ window.onload = async function () {
 		sortedProjects.filter((item, index) => index < 3),
 		true
 	)
-	// attachHoverAnimationOnItems(navItems);
-	// attachHoverAnimationOnItems(albumCovers, true);
 }
