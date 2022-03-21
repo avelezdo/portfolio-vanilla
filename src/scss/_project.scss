@@ -124,13 +124,13 @@
 
 @for $i from 1 through 8 {
 	.project-enter-#{$i} {
-		animation: slide-in-from-left 0.5s linear #{$i / 12}s 1 forwards;
+		animation: slide-in-from-left 0.5s linear #{calc($i / 12)}s 1 forwards;
 	}
 }
 
 @for $i from 1 through 8 {
 	.project-exit-#{$i} {
-		animation: slide-out-to-right 0.5s linear #{$i / 8}s 1 backwards;
+		animation: slide-out-to-right 0.5s linear #{calc($i / 8)}s 1 backwards;
 	}
 }
 

@@ -171,7 +171,7 @@
 
 @for $i from 1 through 8 {
 	.fading-arrow-#{$i} {
-		animation: fading-arrow 1600ms ease-in-out #{$i/2}s infinite forwards;
+		animation: fading-arrow 1600ms ease-in-out #{calc($i / 2)}s infinite forwards;
 	}
 }
 
