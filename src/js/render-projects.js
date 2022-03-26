@@ -57,7 +57,6 @@ function getTranslatedProjects(projects) {
 
 let renderProjects = function (arr, onload = false) {
 	const translatedProjects = getTranslatedProjects(arr)
-	console.log(translatedProjects)
 	const projectList = document.querySelector('.list__projects'),
 		allProjects = document.querySelectorAll('.project')
 	allProjects.forEach((project, index) => {
