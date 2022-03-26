@@ -11,7 +11,7 @@ var translator = new Translator({
 	registerGlobally: '__',
 	persist: false,
 	persistKey: 'preferred_language',
-	filesLocation: '/src/i18n',
+	filesLocation: '/i18n',
 })
 
 translator.fetch(['en', 'es']).then(() => {
