@@ -88,6 +88,20 @@ nav.navbar {
 				animation: mobile-navigation 500ms ease-out 60ms 1 forwards;
 			}
 		}
+		.vertical-separator {
+			border-left-color: $gray__light;
+			border-left-width: 1px;
+			border-left-style: solid;
+			width: 1px;
+			height: 25px;
+			padding-left: 1.5rem;
+			margin-left: 0.5rem;
+		}
+		.language-selector {
+			font-family: 'Tajawal', arial, sans-serif;
+			background-color: $blue__dark;
+			color: $white;
+		}
 	}
 	#burger {
 		display: none;

@@ -19,9 +19,9 @@
 				</div>
 				<div class="mobile-nav__container">
 					<ul class="nav__ul">
-						<li class="nav__link" data-name="about">Sobre mí</li>
-						<li class="nav__link" data-name="work">Experiencia</li>
-						<li class="nav__link" data-name="projects">Proyectos</li>
+						<li class="nav__link" data-i18n="nav.about" data-name="about">Sobre mí</li>
+						<li class="nav__link" data-i18n="nav.experience" data-name="work">Experiencia</li>
+						<li class="nav__link" data-i18n="nav.projects" data-name="projects">Proyectos</li>
 						<li class="nav__link CV" data-name="CV" title="Descargar CV">
 							<a href="https://www.dropbox.com/s/cbrw880zet31l3d/Alberto%20V%C3%A9lez%20CV.pdf?raw=1" download="Alberto Vélez CV" target="_blank"
 								>CV
@@ -29,6 +29,13 @@
 									src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAWRJREFUWEftljFOxDAQRceDqLMVVwAWpG2pqBKbHCAcAAmJgooLsHAASoS0NyAHADupqGgRghVXoEtawgwyChIFCYkDZJHixpLlmf/me2xZQM9D9KwPA8D/dSCKoqUsy04AgD3Pm8Zx/OrST84OKKV2mPnKigohQq319Z8CBEEQCSEurSgz7yZJEg8AgwODA7/ugFJqg4jGVggRt5j5qHwHzojotlx/1Fo/NIVp/BD5vr+OiHcAsPxN8hcimqRpOm8C0RggDMNxURT3QgisS8zMxMybPw5gRaWUe8w8q4FgADg0xpw3qf79+Jpu/NhXA9Fa3AmgwgkncWcAG6iU2ieii7LzD7TWs7ZudgIoISZ21lrb2+E0WveAk0pN0OICSClXiOgGEVe7VE1ET4i4bYx5/ipPpQNSygAATBfxT7HSGJO0ArCfzjzPjwFgrQsEEc1Ho9Fp1ad1cXugS9VtYgcHenfgDXY2tSHuZo1IAAAAAElFTkSuQmCC"
 									alt="Download file icon"
 							/></a>
+						</li>
+						<li class="vertical-separator"></li>
+						<li>
+							<select class="language-selector">
+								<option value="es">ES</option>
+								<option value="en">EN</option>
+							</select>
 						</li>
 					</ul>
 				</div>
@@ -48,7 +55,7 @@
 						</div>
 						<div id="about-info__wrapper">
 							<div class="about__upper">
-								<h2 class="section__header">Sobre mí</h2>
+								<h2 class="section__header" data-i18n="nav.about">Sobre mí</h2>
 								<ul class="nav__icons">
 									<li>
 										<a href="https://www.linkedin.com/in/alberto-v%C3%A9lez-51155320/" target="_blank">
@@ -90,21 +97,21 @@
 									</li>
 								</ul>
 							</div>
-							<p class="about__intro">Desarrollador web con experiencia en UI/UX.</p>
+							<p class="about__intro" data-i18n="about.intro">Desarrollador web con experiencia en UI/UX.</p>
 							<div id="intro-svg"></div>
 							<article>
-								<p class="section__copy">
+								<p class="section__copy" data-i18n="about.first">
 									Programador profesional desde el 2012 tomando como piedra angular el código limpio. En un principio como desarrollador
 									fullstack, poco a poco he ido centrándome cada vez más en la parte frontend, aunque sin dejar el backend del todo.
 								</p>
-								<p class="section__copy">
+								<p class="section__copy" data-i18n="about.second">
 									A medida que he ido creciendo tanto personal como profesionalmente, me he dado cuenta que tanto o más son importantes las
 									llamadas 'soft skills' que la propia destreza técnica; el saber escuchar, trabajar en equipo y la buena comunicación son
 									imprescindibles para el buen desempeño de nuestra profesión.
 								</p>
-								<p class="section__copy">En estos momentos estoy en búsqueda activa de nuevos retos y oportunidades.</p>
+								<p class="section__copy" data-i18n="about.third">En estos momentos estoy en búsqueda activa de nuevos retos y oportunidades.</p>
 								<p class="section__copy">
-									Me puedes encontrar en
+									<span data-i18n="about.contact">Me puedes encontrar en</span>
 									<a href="mailto:albertovelezdev@gmail.com"> <strong>albertovelezdev@gmail.com&nbsp;&#187;</strong></a>
 								</p>
 							</article>
@@ -113,7 +120,7 @@
 				</section>
 				<section class="section__body work">
 					<div class="section__intro">
-						<h2 class="section__header header-with-tag">Experiencia</h2>
+						<h2 class="section__header header-with-tag" data-i18n="nav.experience">Experiencia</h2>
 						<div class="image-wrapper" style="float: right; margin-top: -15%">
 							<div class="mobile-shape ms-left"></div>
 							<img class="img" src="./images/work.jpg" alt="" width="260" />
@@ -124,7 +131,7 @@
 					<div class="work-container"></div>
 				</section>
 				<section class="section__body projects">
-					<h2 class="section__header header-with-tag">Proyectos</h2>
+					<h2 class="section__header header-with-tag" data-i18n="nav.projects">Proyectos</h2>
 					<ul class="list__skills"></ul>
 					<p class="section__copy projects-listed"></p>
 					<ul class="list__projects"></ul>
@@ -179,6 +186,7 @@
 			</footer>
 		</div>
 		<script type="module" src="./src/main.js"></script>
+		<script type="module" src="./src/js/translation.js"></script>
 		<script type="module" src="./src/js/scroll.js"></script>
 		<script type="module" src="./src/js/toggle-nav.js"></script>
 		<script type="module" src="./src/js/onload.js"></script>

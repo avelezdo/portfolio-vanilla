@@ -2,6 +2,7 @@
 	"projects": [
 		{
 			"id": 1,
+			"key": "Portfolio",
 			"title": "Portfolio",
 			"image": "/images/project-images/portfolio.jpg",
 			"technologies": ["Vue.js 2", "SCSS"],
@@ -11,6 +12,7 @@
 		},
 		{
 			"id": 2,
+			"key": "Profiles",
 			"title": "Perfiles",
 			"image": "/images/project-images/profiles.jpg",
 			"technologies": ["Vue.js 2", "SCSS", "Node.js/Express", "Vuetify"],
@@ -20,6 +22,7 @@
 		},
 		{
 			"id": 3,
+			"key": "YouTube-Clone",
 			"title": "Clon YouTube",
 			"image": "/images/project-images/YouTubeClone.jpg",
 			"technologies": ["Vue.js 3", "Vite", "WindiCSS"],
@@ -29,6 +32,7 @@
 		},
 		{
 			"id": 4,
+			"key": "Tennis-Championship",
 			"title": "Campeonato de tenis",
 			"image": "images/project-images/tennis-championship.jpg",
 			"technologies": ["Vue.js 3", "Vite", "SCSS"],

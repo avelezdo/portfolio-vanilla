@@ -6,7 +6,8 @@
 				{
 					"title": "Desarrollador Web FullStack / Corresponsable del proyecto",
 					"name": "Zigma",
-					"duration": "2018 - Actualidad",
+					"key": "Zigma",
+					"duration": "2018 - 2022",
 					"technologies": ["Hermes", "CSS", "Bootstrap", "jQuery", "C#", "SQL Server"],
 					"type": "Proyecto",
 					"github_link": "",
@@ -21,6 +22,7 @@
 				{
 					"title": "Desarrollador Web FullStack",
 					"name": "Picly",
+					"key": "Picly",
 					"duration": "2017 - 2019",
 					"technologies": ["Node.js/Express", "CSS", "Bootstrap", "jQuery", "Redis", "Nginx", "Hotjar"],
 					"type": "Producto",
@@ -43,6 +45,7 @@
 				{
 					"title": "Desarrollador Web Fullstack / Soporte",
 					"name": "Iris",
+					"key": "Iris",
 					"duration": "2012 - 2017",
 					"technologies": ["HTML", "CSS", "ASP.NET MVC", "jQuery", "SQL Server", "Azure", "APIs"],
 					"type": "Producto",
@@ -58,6 +61,7 @@
 				{
 					"title": "Desarrollador Web Fullstack",
 					"name": "iControl",
+					"key": "iControl",
 					"duration": "2016",
 					"technologies": ["HTML", "CSS", "jQuery", "Node.js/Express", "MySQL", "Nginx"],
 					"type": "Proyecto",
@@ -69,6 +73,7 @@
 				{
 					"title": "Desarrollador Web Fullstack",
 					"name": "PRIME DHE Server",
+					"key": "PRIME-DHE-Server",
 					"duration": "2016",
 					"technologies": ["HTML", "CSS", "Bootstrap", "jQuery", "ASP.NET Core", "Azure", "SQL Server"],
 					"type": "Producto",
@@ -80,6 +85,7 @@
 				{
 					"title": "Desarrollador Web Fullstack",
 					"name": "Voyager",
+					"key": "Voyager",
 					"duration": "2013",
 					"technologies": ["HTML", "CSS", "Bootstrap", "Angular.js", "Node.js/Express", "MySQL", "Nginx"],
 					"type": "Producto",

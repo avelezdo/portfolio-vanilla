@@ -1,0 +1,88 @@
+{
+	"nav": {
+		"projects": "Projects",
+		"experience": "Experience",
+		"about": "About",
+		"download": "Download CV"
+	},
+	"about": {
+		"intro": "Web developer with UI/UX experience.",
+		"first": "Professional programmer since 2012 taking clean code as a cornerstone. Initially as a fullstack developer, I have been gradually focusing more and more on the frontend, but without leaving the backend completely.",
+		"second": "As I have grown both personally and professionally, I have realised that the so-called 'soft skills' are just as important as technical skills; listening, teamwork and good communication skills are essential for the good performance of our profession.",
+		"third": "I am currently in active search of new challenges and opportunities.",
+		"contact": "You can find me at",
+		"email": "albertovelezdev@gmail.com&nbsp;&#187;"
+	},
+	"work": {
+		"description": "description"
+	},
+	"jobs": {
+		"Picly": {
+			"title": "Fullstack Web Developer",
+			"type": "Product",
+			"description": "An image server with on-the-fly transformations via urls.",
+			"bullet-1": "In charge of the landing page as well as the user interface of the application.",
+			"bullet-2": "I applied UX knowledge to present the information in a comfortable and fast way to the visitor..",
+			"bullet-3": "Teamwork, in which everyone was committed and contributed beyond the purely technical aspects.",
+			"bullet-4": "Agile methodologies were applied during development and business processes were applied once the application was in production.",
+			"bullet-5": "I also took care of setting up analytics tools such as Google Analytics and Hotjar."
+		},
+		"Voyager": {
+			"title": "Fullstack Web Developer",
+			"type": "Project",
+			"description": "Control system for utilities."
+		},
+		"PRIME-DHE-Server": {
+			"title": "Fullstack Web Developer",
+			"type": "Product",
+			"description": "Virtualised digital meter for utilities."
+		},
+		"iControl": {
+			"title": "Fullstack Web Developer",
+			"type": "Project",
+			"description": "Measurement management panel for utilities."
+		},
+		"Iris": {
+			"title": "Fullstack Web Developer & support",
+			"type": "Product",
+			"description": "Remote management and metering system for digital meters (STG).",
+			"bullet-1": "Participant from the conception of the product to its commercial exploitation.",
+			"bullet-2": "Pioneers in bringing Azure technology to the electricity sector, offering the possibility of pay-per-use.",
+			"bullet-3": "The system is still in production at several international customers, supporting thousands of digital meters."
+		},
+		"Zigma": {
+			"type": "Project",
+			"title": "Fullstack Web Developer / Project co-responsible",
+			"description": "ERP for an international aeronautical manufacturing company called Sofitec.",
+			"bullet-1": "A component-based framework was developed from scratch. It is currently undergoing continuous improvement.",
+			"bullet-2": "Analysis of the client's requirements in order to offer the optimum option, both in terms of time and usability.",
+			"bullet-3": "Two-week sprint cycles."
+		}
+	},
+	"projects": {
+		"Portfolio": {
+			"title": "Portfolio",
+			"description": "Portfolio created with Vue.js 2"
+		},
+		"Profiles": {
+			"title": "Profiles",
+			"description": "List, save and delete RandomAPI API profiles"
+		},
+		"YouTube-Clone": {
+			"title": "Youtube Clone",
+			"description": "YouTube clone. Mobile First."
+		},
+		"Tennis-Championship": {
+			"title": "Tennis Championship",
+			"description": "First Championship Tennis Tomares web"
+		}
+	},
+	"skills": {
+		"all": "All",
+		"latest-projects": "Latest projects"
+	},
+	"misc": {
+		"of": "of",
+		"projects": "projects"
+	}
+}

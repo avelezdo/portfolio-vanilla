@@ -15,5 +15,8 @@
 	"devDependencies": {
 		"sass": "^1.49.7",
 		"vite": "^2.8.0"
+	},
+	"dependencies": {
+		"@andreasremdt/simple-translator": "^2.0.4"
 	}
 }

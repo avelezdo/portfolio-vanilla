@@ -1,12 +1,13 @@
 import { projects as myProjects } from '/public/data/projects.json'
 
-let skills = ['Proyectos recientes', 'SCSS', 'Vue.js 2', 'Vue.js 3', 'Node.js/Express']
+const currentLanguage = document.querySelector('select').value
+let skills = [__('skills.latest-projects', currentLanguage), __('skills.all', currentLanguage), 'SCSS', 'Vue.js 2', 'Vue.js 3', 'Node.js/Express']
 
 let selectedSkill = null
 
 let renderSkills = function (num) {
 	let ul = document.querySelector('.list__skills'),
-		newArr = skills.map((skill, index) => {
+		newArr = getTranslatedSkills().map((skill, index) => {
 			if (index === Number.parseInt(num)) {
 				selectedSkill = skill
 				return `<li class="skill-selector skill__active" data-id="${index}">${skill}</li>`
@@ -14,8 +15,19 @@ let renderSkills = function (num) {
 				return `<li class="skill-selector skill__inactive" data-id="${index}">${skill}</li>`
 			}
 		})
+	setTranslationsToSkills(newArr)
 	ul.innerHTML = newArr.join('')
 	attachSkillEvent()
+}
+
+function getTranslatedSkills() {
+	const currentLanguage = document.querySelector('select').value
+	return [__('skills.latest-projects', currentLanguage), __('skills.all', currentLanguage), ...skills.slice(2)]
+}
+
+function setTranslationsToSkills(HTMLSkills) {
+	HTMLSkills[0] = HTMLSkills[0].replace('<li', '<li data-i18n="skills.latest-projects"')
+	HTMLSkills[1] = HTMLSkills[1].replace('<li', '<li data-i18n="skills.all"')
 }
 
 function attachSkillEvent() {
@@ -34,7 +46,18 @@ function attachSkillEvent() {
 	})
 }
 
+function getTranslatedProjects(projects) {
+	const currentLanguage = document.querySelector('select').value
+	return projects.map((project) => {
+		project.title = __(`projects.${project.key}.title`, currentLanguage)
+		project.description = __(`projects.${project.key}.description`, currentLanguage)
+		return project
+	})
+}
+
 let renderProjects = function (arr, onload = false) {
+	const translatedProjects = getTranslatedProjects(arr)
+	console.log(translatedProjects)
 	const projectList = document.querySelector('.list__projects'),
 		allProjects = document.querySelectorAll('.project')
 	allProjects.forEach((project, index) => {
@@ -44,19 +67,19 @@ let renderProjects = function (arr, onload = false) {
 	})
 
 	setTimeout(function () {
-		projectList.innerHTML = arr
+		projectList.innerHTML = translatedProjects
 			.map((project, index) => {
 				return `
         <li class="project project-enter-${index + 1}">
             <div class="project__info">
                 <div class="project__header-row">
-                    <p class="section__headline project__name">${project.title}</p>
+                    <p class="section__headline project__name" data-i18n="projects.${project.key}.title">${project.title}</p>
                     <div>
                         ${addProductionLink(project)}
                         ${addGitHubLink(project)}
                     </div>
                 </div>
-                <p class="project__description section__copy">
+                <p class="project__description section__copy" data-i18n="projects.${project.key}.description">
                     ${project.description}
                 </p>
                 <ul class="project__tech" data-project-name="recordshare">
@@ -72,8 +95,10 @@ let renderProjects = function (arr, onload = false) {
 			})
 			.join('')
 	}, 500)
-
-	document.querySelector('.projects-listed').innerHTML = `${arr.length} de ${myProjects.length} proyectos`
+	const currentLanguage = document.querySelector('select').value
+	document.querySelector('.projects-listed').innerHTML = `${translatedProjects.length} <span data-i18n="misc.of">${__('misc.of', currentLanguage)}</span> ${
+		myProjects.length
+	} <span data-i18n="misc.projects">${__('misc.projects', currentLanguage)}</span>`
 }
 
 let addProductionLink = function (project) {
@@ -105,10 +130,10 @@ let addTechnologies = function (project) {
 }
 
 let filterProjects = function (query) {
-	if (selectedSkill === 'All') {
+	if (['Todos', 'All'].includes(selectedSkill)) {
 		return myProjects
 	}
-	if (selectedSkill === 'Proyectos recientes') {
+	if (['Proyectos recientes', 'Latest projects'].includes(selectedSkill)) {
 		return myProjects.filter((_, index) => index < 3)
 	}
 

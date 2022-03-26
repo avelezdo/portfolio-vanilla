@@ -1,0 +1,88 @@
+{
+	"nav": {
+		"projects": "Proyectos",
+		"experience": "Experiencia",
+		"about": "Sobre mí",
+		"download": "Descargar CV"
+	},
+	"about": {
+		"intro": "Desarrollador web con experiencia en UI/UX.",
+		"first": "Programador profesional desde el 2012 tomando como piedra angular el código limpio. En un principio como desarrollador fullstack, poco a poco he ido centrándome cada vez más en la parte frontend, aunque sin dejar el backend del todo.",
+		"second": "A medida que he ido creciendo tanto personal como profesionalmente, me he dado cuenta que tanto o más son importantes las llamadas 'soft skills' que la propia destreza técnica; el saber escuchar, trabajar en equipo y la buena comunicación son imprescindibles para el buen desempeño de nuestra profesión.",
+		"third": "En estos momentos estoy en búsqueda activa de nuevos retos y oportunidades.",
+		"contact": "Me puedes encontrar en",
+		"email": "albertovelezdev@gmail.com&nbsp;&#187;"
+	},
+	"work": {
+		"description": "descripción"
+	},
+	"jobs": {
+		"Picly": {
+			"title": "Desarrollador Web FullStack",
+			"type": "Producto",
+			"description": "Un servidor de imágenes con transformaciones al vuelo a través de urls.",
+			"bullet-1": "Encargado del landing page así como de la interfaz de la aplicación del usuario.",
+			"bullet-2": "Apliqué conocimientos de UX para presentar la información de una manera cómoda y rápida al visitante.",
+			"bullet-3": "Trabajo en equipo, en la que todos estuvieron comprometidos y aportando más allá de lo púramente técnico.",
+			"bullet-4": "Se aplicaron metodologías ágiles durante la elaboración y procesos de negocio una vez que la aplicación estaba en producción.",
+			"bullet-5": "También me encargué de configurar herramientas de análisis como Google Analytics y Hotjar."
+		},
+		"Voyager": {
+			"type": "Proyecto",
+			"title": "Desarrollador Web Fullstack",
+			"description": "Sistema de control para compañías eléctricas."
+		},
+		"PRIME-DHE-Server": {
+			"type": "Producto",
+			"title": "Desarrollador Web Fullstack",
+			"description": "Contador digital virtualizado para compañías eléctricas."
+		},
+		"iControl": {
+			"type": "Proyecto",
+			"title": "Desarrollador Web Fullstack",
+			"description": "Panel de administración de medidas para compañía eléctrica."
+		},
+		"Iris": {
+			"type": "Producto",
+			"title": "Desarrollador Web Fullstack / Soporte",
+			"description": "Sistema de telegestión y telemedida de contadores digitales (STG).",
+			"bullet-1": "Partícipe desde la concepción del producto hasta su explotación comercial.",
+			"bullet-2": "Pioneros en llevar la tecnología Azure al sector eléctrico, ofreciendo la posibilidad de pago por uso.",
+			"bullet-3": "Sistema que sigue en producción en varios clientes internacionales, dando soporte a miles de contadores digitales."
+		},
+		"Zigma": {
+			"type": "Proyecto",
+			"title": "Desarrollador Web FullStack / Corresponsable del proyecto",
+			"description": "ERP para una empresa internacional manufacturadora aeronáutica llamada Sofitec.",
+			"bullet-1": "Se desarrolló un framework desde cero basado en componentes. Actualmente sigue en proceso de mejora continua.",
+			"bullet-2": "Análisis de los requisitos del cliente para ofrecer la opción óptima, tanto en tiempo como usabilidad.",
+			"bullet-3": "Ciclos de trabajo (sprint) de dos semanas."
+		}
+	},
+	"projects": {
+		"Portfolio": {
+			"title": "Portfolio",
+			"description": "Portfolio creado con Vue.js 2"
+		},
+		"Profiles": {
+			"title": "Perfiles",
+			"description": "Lista, guarda y elimina perfiles de la API RandomAPI"
+		},
+		"YouTube-Clone": {
+			"title": "Clon Youtube",
+			"description": "Clon de YouTube. Mobile First."
+		},
+		"Tennis-Championship": {
+			"title": "Campeonato de tenis",
+			"description": "Web del I Campeonato de tenis de Tomares"
+		}
+	},
+	"skills": {
+		"all": "Todos",
+		"latest-projects": "Proyectos recientes"
+	},
+	"misc": {
+		"of": "de",
+		"projects": "proyectos"
+	}
+}
