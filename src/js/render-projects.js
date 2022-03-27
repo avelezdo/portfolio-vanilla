@@ -1,4 +1,4 @@
-import { projects as myProjects } from '/public/data/projects.json'
+import { projects as myProjects } from '/data/projects.json'
 console.log('json projects')
 console.log(myProjects)
 const currentLanguage = document.querySelector('select').value
