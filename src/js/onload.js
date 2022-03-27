@@ -17,9 +17,7 @@ window.onload = async function () {
 	attachSkillEvent()
 	await renderJobs(jobs)
 	attachShowEvent()
-	console.log({ myProjects })
 	const sortedProjects = myProjects.sort(sortById)
-	console.log({ sortedProjects })
 	await renderProjects(
 		sortedProjects.filter((item, index) => index < 3),
 		true

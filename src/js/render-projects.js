@@ -1,6 +1,4 @@
 import { projects as myProjects } from '/public/data/projects.json'
-console.log('json projects')
-console.log(myProjects)
 const currentLanguage = document.querySelector('select').value
 let skills = [__('skills.latest-projects', currentLanguage), __('skills.all', currentLanguage), 'SCSS', 'Vue.js 2', 'Vue.js 3', 'Node.js/Express']
 
@@ -48,14 +46,10 @@ function attachSkillEvent() {
 }
 
 function getTranslatedProjects(projects) {
-	console.log(projects)
 	const currentLanguage = document.querySelector('select').value
-	console.log(currentLanguage)
 	return projects.map((project) => {
-		// console.log(project.key)
-		// console.log(__(`projects.${project.key}.title`, currentLanguage))
-		// project.title = __(`projects.${project.key}.title`, currentLanguage)
-		// project.description = __(`projects.${project.key}.description`, currentLanguage)
+		project.title = __(`projects.${project.key}.title`, currentLanguage)
+		project.description = __(`projects.${project.key}.description`, currentLanguage)
 		return project
 	})
 }
