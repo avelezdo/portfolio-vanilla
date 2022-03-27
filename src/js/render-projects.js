@@ -48,19 +48,14 @@ function attachSkillEvent() {
 
 function getTranslatedProjects() {
 	const currentLanguage = document.querySelector('select').value
-	console.log({ myProjects })
-	const translatedProjects = myProjects.map((project) => {
+	myProjects.map((project) => {
 		project.title = __(`projects.${project.key}.title`, currentLanguage)
 		project.description = __(`projects.${project.key}.description`, currentLanguage)
 		return project
 	})
-	console.log({ translatedProjects })
-	return translatedProjects
 }
 
 let renderProjects = function (arr, onload = false) {
-	console.log({ arr })
-	// const translatedProjects = getTranslatedProjects(arr)
 	const projectList = document.querySelector('.list__projects'),
 		allProjects = document.querySelectorAll('.project')
 	allProjects.forEach((project, index) => {
