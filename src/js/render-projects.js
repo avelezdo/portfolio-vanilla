@@ -34,6 +34,7 @@ function attachSkillEvent() {
 	const projectsDestination = document.querySelector('.projects')
 	skillSelectors.forEach((skill) => {
 		skill.addEventListener('mousedown', function (e) {
+			getTranslatedProjects()
 			renderSkills(e.target.dataset.id)
 			renderProjects(filterProjects(selectedSkill))
 			// using the scroll.js function to jump
@@ -45,17 +46,21 @@ function attachSkillEvent() {
 	})
 }
 
-function getTranslatedProjects(projects) {
+function getTranslatedProjects() {
 	const currentLanguage = document.querySelector('select').value
-	return projects.map((project) => {
+	console.log({ myProjects })
+	const translatedProjects = myProjects.map((project) => {
 		project.title = __(`projects.${project.key}.title`, currentLanguage)
 		project.description = __(`projects.${project.key}.description`, currentLanguage)
 		return project
 	})
+	console.log({ translatedProjects })
+	return translatedProjects
 }
 
 let renderProjects = function (arr, onload = false) {
-	const translatedProjects = getTranslatedProjects(arr)
+	console.log({ arr })
+	// const translatedProjects = getTranslatedProjects(arr)
 	const projectList = document.querySelector('.list__projects'),
 		allProjects = document.querySelectorAll('.project')
 	allProjects.forEach((project, index) => {
@@ -65,7 +70,7 @@ let renderProjects = function (arr, onload = false) {
 	})
 
 	setTimeout(function () {
-		projectList.innerHTML = translatedProjects
+		projectList.innerHTML = arr
 			.map((project, index) => {
 				return `
         <li class="project project-enter-${index + 1}">
@@ -93,8 +98,9 @@ let renderProjects = function (arr, onload = false) {
 			})
 			.join('')
 	}, 500)
+
 	const currentLanguage = document.querySelector('select').value
-	document.querySelector('.projects-listed').innerHTML = `${translatedProjects.length} <span data-i18n="misc.of">${__('misc.of', currentLanguage)}</span> ${
+	document.querySelector('.projects-listed').innerHTML = `${arr.length} <span data-i18n="misc.of">${__('misc.of', currentLanguage)}</span> ${
 		myProjects.length
 	} <span data-i18n="misc.projects">${__('misc.projects', currentLanguage)}</span>`
 }
