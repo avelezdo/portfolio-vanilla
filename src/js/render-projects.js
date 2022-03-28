@@ -80,13 +80,12 @@ let renderProjects = function (arr, onload = false) {
                 <p class="project__description section__copy" data-i18n="projects.${project.key}.description">
                     ${project.description}
                 </p>
-                <ul class="project__tech" data-project-name="recordshare">
+                <ul class="project__tech">
                     ${addTechnologies(project)}
                 </ul>
             </div>
             <div>
-                <img src="${project.image}" alt="${project.title} UI"
-                data-project-name="${project.title.toLowerCase()}" class="img project__img">
+                <img src="${project.image}" alt="${project.title} UI" class="img project__img">
             </div>
         </li>
     `
