@@ -85,7 +85,7 @@ let renderProjects = function (arr, onload = false) {
                 </ul>
             </div>
             <div>
-                <img src="${project.image}" alt="${project.title} UI" class="img project__img">
+                <img loading="lazy" src="${project.image}" alt="${project.title} UI" class="img project__img">
             </div>
         </li>
     `
