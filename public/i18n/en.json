@@ -62,6 +62,10 @@
 	"projects": {
 		"Portfolio": {
 			"title": "Portfolio",
+			"description": "Portfolio created with vanilla JavaScript"
+		},
+		"Portfolio-vue2": {
+			"title": "Portfolio",
 			"description": "Portfolio created with Vue.js 2"
 		},
 		"Profiles": {
