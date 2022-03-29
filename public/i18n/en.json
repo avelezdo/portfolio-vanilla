@@ -7,8 +7,8 @@
 	},
 	"about": {
 		"intro": "Web developer with UI/UX experience.",
-		"first": "Professional programmer since 2012 taking clean code as a cornerstone. Initially as a fullstack developer, I have been gradually focusing more and more on the frontend, but without leaving the backend completely.",
-		"second": "As I have grown both personally and professionally, I have realised that the so-called 'soft skills' are just as important as technical skills; listening, teamwork and good communication skills are essential for the good performance of our profession.",
+		"first": "Professional developer since 2012 taking clean code as a cornerstone. Initially as a fullstack developer, I have been gradually focusing more and more on the frontend, but without leaving the backend completely.",
+		"second": "As I have grown both personally and professionally, I have realized the so-called 'soft skills' are just as important as technical skills; listening, teamwork and good communication skills are essential for the good performance of our profession.",
 		"third": "I am currently in active search of new challenges and opportunities.",
 		"contact": "You can find me at",
 		"email": "albertovelezdev@gmail.com&nbsp;&#187;"
@@ -20,9 +20,9 @@
 		"Picly": {
 			"title": "Fullstack Web Developer",
 			"type": "Product",
-			"description": "An image server with on-the-fly transformations via urls.",
-			"bullet-1": "In charge of the landing page as well as the user interface of the application.",
-			"bullet-2": "I applied UX knowledge to present the information in a comfortable and fast way to the visitor..",
+			"description": "An image server with on-the-fly transformations via URLs.",
+			"bullet-1": "Responsible for the landing page as well as the user interface of the application.",
+			"bullet-2": "I applied UX knowledge to present the information in a comfortable and fast way to the visitor.",
 			"bullet-3": "Teamwork, in which everyone was committed and contributed beyond the purely technical aspects.",
 			"bullet-4": "Agile methodologies were applied during development and business processes were applied once the application was in production.",
 			"bullet-5": "I also took care of setting up analytics tools such as Google Analytics and Hotjar."
