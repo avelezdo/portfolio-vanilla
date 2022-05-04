@@ -1,6 +1,6 @@
 import { projects as myProjects } from '/public/data/projects.json'
 const currentLanguage = document.querySelector('select').value
-let skills = [__('skills.latest-projects', currentLanguage), __('skills.all', currentLanguage), 'SCSS', 'Vue.js 2', 'Vue.js 3', 'Node.js/Express']
+let skills = [__('skills.latest-projects', currentLanguage), __('skills.all', currentLanguage), 'SCSS', 'React', 'Vue.js 2', 'Vue.js 3', 'Node.js/Express']
 
 let selectedSkill = null
 
