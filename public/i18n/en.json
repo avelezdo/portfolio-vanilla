@@ -79,6 +79,10 @@
 		"Tennis-Championship": {
 			"title": "Tennis Championship",
 			"description": "First Championship Tennis Tomares web"
+		},
+		"Resize-Me": {
+			"title": "Resize Me",
+			"description": "Tiny service for resize images"
 		}
 	},
 	"skills": {

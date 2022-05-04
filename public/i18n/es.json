@@ -79,6 +79,10 @@
 		"Tennis-Championship": {
 			"title": "Campeonato de tenis",
 			"description": "Web del I Campeonato de tenis de Tomares"
+		},
+		"Resize-Me": {
+			"title": "Resize Me",
+			"description": "Servicio para redimensionar imágenes"
 		}
 	},
 	"skills": {
