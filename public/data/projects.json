@@ -55,7 +55,7 @@
 			"key": "Resize-Me",
 			"title": "Resize Images",
 			"image": "/images/project-images/resize-me.jpg",
-			"technologies": ["React", "Vite", "Tailwind CSS"],
+			"technologies": ["React", "Node.js/Express", "Vite", "Tailwind CSS"],
 			"description": "Servicio para redimensionar imágenes",
 			"github_link": "https://github.com/avelezdo/resize-images",
 			"production_link": "https://safe-dusk-38258.herokuapp.com/"
