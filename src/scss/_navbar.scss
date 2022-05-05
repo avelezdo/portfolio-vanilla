@@ -97,11 +97,31 @@ nav.navbar {
 			padding-left: 1.5rem;
 			margin-left: 0.5rem;
 		}
-		.language-selector {
-			font-family: 'Tajawal', arial, sans-serif;
-			background-color: $blue__dark;
-			color: $white;
-		}
+        .language-selector-wrapper {
+            @include nav-collapse {
+                display: none;
+            }
+        }
+        .language-selector {
+            font-family: 'Tajawal', arial, sans-serif;
+            background-color: $blue__dark;
+            color: $white;
+        }
+        li.vertical-separator {
+            @include nav-collapse {
+                display: none;
+            }
+        }
+        .language-nav-collapse-wrapper {
+            display: none;
+            @include nav-collapse {
+                display: list-item;
+                .vertical-separator.nav-collapse {
+                    padding-left: 0;
+                    margin-inline: 1rem;
+                }
+            }
+        }
 	}
 	#burger {
 		display: none;

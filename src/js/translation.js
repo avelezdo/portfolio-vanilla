@@ -17,6 +17,7 @@ var translator = new Translator({
 translator.fetch(['en', 'es']).then(() => {
 	translator.translatePageTo()
 	registerLanguageToggle()
+	registerLanguageOption()
 })
 
 function updateCVHref(language) {
@@ -32,8 +33,19 @@ function registerLanguageToggle() {
 	var select = document.querySelector('select')
 
 	select.addEventListener('change', (evt) => {
-		var language = evt.target.value
+		const language = evt.target.value
 		updateCVHref(language)
 		translator.translatePageTo(language)
+	})
+}
+
+function registerLanguageOption() {
+	var languageOptions = document.querySelectorAll('.language-option')
+	languageOptions.forEach((languageOption) => {
+		languageOption.addEventListener('click', (evt) => {
+			const select = document.querySelector('select')
+			select.value = evt.target.textContent.toLowerCase()
+			select.dispatchEvent(new Event('change'))
+		})
 	})
 }
